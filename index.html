@@ -11,10 +11,32 @@
 
 <body>
 	<div class="container">
-		<h1>Welcome to Our Landing Page</h1>
+		<h1>WIFI QR Code</h1>
+		<div class="wifi-config">
+			<label for="ssid">SSID:</label>
+			<input type="text" id="ssid" name="ssid" placeholder="Enter SSID">
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter Password">
+
+			<label for="encryption">Encryption:</label>
+			<select id="encryption" name="encryption">
+				<option value="None">None</option>
+				<option value="WPA">WPA</option>
+				<option value="WPA2">WPA2</option>
+				<option value="WEP">WEP</option>
+			</select>
+
+			<div class="buttons-container">
+				<button id="apply">Apply</button>
+				<button id="clear">Clear</button>
+			</div>
+		</div>
+
 		<div id="qrcode"></div>
 	</div>
-	<script src="script.js"></script>
+	<script type="module" src="script.js"></script>
+
 </body>
 
 </html>

@@ -9,11 +9,38 @@ body {
 }
 
 .container {
+    max-width: 400px;
+    width: 100%;
     text-align: center;
     background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wifi-config {
+    display: flex;
+    flex-direction: column;
+}
+
+.wifi-config label {
+    margin-top: 10px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttons-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
 }
 
 #qrcode {
