@@ -13,7 +13,7 @@ body {
     width: 100%;
     text-align: center;
     background: white;
-    padding: 20px;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -45,4 +45,33 @@ body {
 
 #qrcode {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    margin-top: 20px;
+    font-size: 48px;
+    color: #007BFF;
+}
+
+/* Spinner animation */
+.spinner:after {
+    content: " ";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 0.2em solid #007BFF;
+    border-color: #007BFF transparent #007BFF transparent;
+    animation: spinner 1.2s linear infinite;
+}
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

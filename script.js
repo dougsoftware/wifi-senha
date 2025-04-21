@@ -21,8 +21,8 @@ function generateQRCode() {
 
 	const qrcode = new QRCode("qrcode", {
 		text: qrCodeText,
-		width: 380,
-		height: 380,
+		width: 300,
+		height: 300,
 		colorDark: "#000000",
 		colorLight: "#ffffff",
 		correctLevel: QRCode.CorrectLevel.H
@@ -38,8 +38,6 @@ function clearFields() {
 	password.value = '';
 	encryption.value = 'None';
 	qrCode.innerHTML = '';
-	qrCode.style.display = 'none';
-	document.getElementById('qrcode').style.display = 'none';
 }
 
 
@@ -50,10 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	generateButton?.addEventListener('click', function () {
 		generateQRCode();
 	});
-
-	console.log("Botão de gerar QR Code encontrado:", generateButton);
-	console.log("Botão de limpar encontrado:", clearButton);
-	
 
 	clearButton?.addEventListener('click', function () {
 		clearFields();
