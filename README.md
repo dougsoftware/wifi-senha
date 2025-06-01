@@ -4,4 +4,5 @@
 
 https://www.workana.com/job/single-use-qrcode-generator?ref=projects_1
 
-![image](https://github.com/user-attachments/assets/74043276-47d9-4575-b5fa-ddcb7e052eca)
+![wifi-qrcode](https://github.com/user-attachments/assets/0e613621-0179-455d-812e-ba9781b0f9ff)
+
