@@ -1,4 +1,4 @@
-# Landing page QRCODE
+# WIFI PASSWORD QRCODE
 
 ### Idea from
 
