@@ -50,6 +50,11 @@ body {
     align-items: center;
 }
 
+#qrcode img {
+    max-width: 90%;
+    height: auto;
+}
+
 .spinner {
     margin-top: 20px;
     font-size: 48px;
