@@ -14,7 +14,9 @@
 		<div class="lang-switcher">
 			<span id="current-lang"></span>
 			<button id="toggle-lang" title="Switch Language">
-				<img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" alt="Google Translate Icon" style="vertical-align: middle; width: 20px; height: 20px; margin-right: 6px;">
+				<img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png"
+					alt="Google Translate Icon"
+					style="vertical-align: middle; width: 20px; height: 20px; margin-right: 6px;">
 				Switch Language
 			</button>
 		</div>
@@ -24,7 +26,11 @@
 			<input type="text" id="ssid" name="ssid" placeholder="Enter SSID">
 
 			<label for="password" id="label-password">Password (Senha):</label>
-			<input type="password" id="password" name="password" placeholder="Enter Password">
+			<div style="display: flex; align-items: center;">
+				<input type="password" id="password" name="password" placeholder="Enter Password" style="flex:1;">
+				<button type="button" id="toggle-password" title="Mostrar/Esconder Senha"
+					style="margin-left:5px;">👁️</button>
+			</div>
 
 			<label for="encryption" id="label-encryption">Encryption (Tipo da criptografia):</label>
 			<select id="encryption" name="encryption">

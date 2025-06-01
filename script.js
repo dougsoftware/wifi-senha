@@ -233,3 +233,18 @@ downloadBtn.addEventListener('click', () => {
 clearBtn.addEventListener('click', () => {
 	downloadBtn.style.display = 'none';
 });
+
+const passwordInput = document.getElementById('password');
+const togglePasswordBtn = document.getElementById('toggle-password');
+
+if (togglePasswordBtn) {
+    togglePasswordBtn.addEventListener('click', () => {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            togglePasswordBtn.textContent = '🙈';
+        } else {
+            passwordInput.type = 'password';
+            togglePasswordBtn.textContent = '👁️';
+        }
+    });
+}
