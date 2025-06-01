@@ -2,27 +2,31 @@
 <html lang="en">
 
 <head>
-	<meta name="google-adsense-account" content="ca-pub-9377371618407904">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Landing Page with QR Code</title>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9377371618407904"
-		crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="styles.css">
 	<script type="text/javascript" src="qrcode.js"></script>
 </head>
 
 <body>
 	<div class="container">
-		<h1>WIFI QR Code</h1>
+		<div class="lang-switcher">
+			<span id="current-lang"></span>
+			<button id="toggle-lang" title="Switch Language">
+				<img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" alt="Google Translate Icon" style="vertical-align: middle; width: 20px; height: 20px; margin-right: 6px;">
+				Switch Language
+			</button>
+		</div>
+		<h1 id="title">WIFI QR Code</h1>
 		<div class="wifi-config">
-			<label for="ssid">SSID (Nome do WIFI):</label>
+			<label for="ssid" id="label-ssid">SSID (Nome do WIFI):</label>
 			<input type="text" id="ssid" name="ssid" placeholder="Enter SSID">
 
-			<label for="password">Password (Senha):</label>
+			<label for="password" id="label-password">Password (Senha):</label>
 			<input type="password" id="password" name="password" placeholder="Enter Password">
 
-			<label for="encryption">Encryption (Tipo da criptografia):</label>
+			<label for="encryption" id="label-encryption">Encryption (Tipo da criptografia):</label>
 			<select id="encryption" name="encryption">
 				<option value="None">None</option>
 				<option value="WPA">WPA</option>

@@ -75,3 +75,43 @@ body {
         transform: rotate(360deg);
     }
 }
+
+body.light {
+    background-color: #f0f0f0;
+    color: #222;
+}
+
+body.dark {
+    background-color: #181818;
+    color: #f0f0f0;
+}
+
+body.dark .container {
+    background: #232323;
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+body.light .container {
+    background: white;
+    color: #222;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button#toggle-theme {
+    margin-left: 10px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+body.dark button#toggle-theme {
+    background: #333;
+    color: #f0f0f0;
+}
+
+body.light button#toggle-theme {
+    background: #eee;
+    color: #222;
+}
