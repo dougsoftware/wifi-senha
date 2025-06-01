@@ -1,3 +1,8 @@
+/**
+ * 
+ * @returns {string} - The text to be encoded in the QR code
+ */
+
 function getDataToCreateQRCode() {
 	const ssid = document.getElementById('ssid').value;
 	const password = document.getElementById('password').value;
@@ -15,6 +20,10 @@ function getDataToCreateQRCode() {
 	return `WIFI:T:${encryption};S:${ssid};P:${password};;`;
 }
 
+/**
+ * 
+ * @returns {void}
+ */
 function generateQRCode() {
 	const qrCodeText = getDataToCreateQRCode();
 	if (!qrCodeText) return;
@@ -29,6 +38,9 @@ function generateQRCode() {
 	});
 }
 
+/**
+ * Clears the input fields and QR code display
+ */
 function clearFields() {
 	const ssid = document.getElementById('ssid');
 	const password = document.getElementById('password');
@@ -40,6 +52,9 @@ function clearFields() {
 	qrCode.innerHTML = '';
 }
 
+/**
+ * * Translations for the application
+ */
 
 const translations = {
 	en: {
@@ -76,13 +91,24 @@ const translations = {
 	}
 };
 
+/**
+ * 
+ * @returns {string} - The detected language code ('en' or 'pt')
+ */
+
 function detectLanguage() {
 	const lang = navigator.language || navigator.userLanguage;
 	return lang.startsWith('pt') ? 'pt' : 'en';
 }
 
+/**
+ * * Applies the translations based on the detected language
+ */
 let currentLang = detectLanguage();
 
+/**
+ * * Applies the translations to the HTML elements
+ */
 function applyTranslations() {
 	const t = translations[currentLang];
 	document.getElementById('title').textContent = t.title;
@@ -102,12 +128,21 @@ function applyTranslations() {
 	document.getElementById('toggle-lang').textContent = t.switch;
 }
 
+/**
+ * 
+ * @returns 
+ */
+
 function detectTheme() {
 	if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 		return 'dark';
 	}
 	return 'light';
 }
+
+/**
+ * * Apply the selected theme to the document body
+ */
 
 function applyTheme(theme) {
 	const body = document.body;
@@ -118,6 +153,10 @@ function applyTheme(theme) {
 		themeBtn.textContent = theme === 'dark' ? (currentLang === 'pt' ? 'Tema Claro' : 'Light Theme') : (currentLang === 'pt' ? 'Tema Escuro' : 'Dark Theme');
 	}
 }
+
+/**
+ * Main script execution
+ */
 
 document.addEventListener("DOMContentLoaded", function () {
 	applyTranslations();
@@ -195,6 +234,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+/**
+ * Download QR Code functionality
+ */
+
 const applyBtn = document.getElementById('apply');
 const clearBtn = document.getElementById('clear');
 const downloadBtn = document.getElementById('download-qrcode');
@@ -234,17 +277,20 @@ clearBtn.addEventListener('click', () => {
 	downloadBtn.style.display = 'none';
 });
 
+/**
+ * Toggle password visibility
+ */
 const passwordInput = document.getElementById('password');
 const togglePasswordBtn = document.getElementById('toggle-password');
 
 if (togglePasswordBtn) {
-    togglePasswordBtn.addEventListener('click', () => {
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-            togglePasswordBtn.textContent = '🙈';
-        } else {
-            passwordInput.type = 'password';
-            togglePasswordBtn.textContent = '👁️';
-        }
-    });
+	togglePasswordBtn.addEventListener('click', () => {
+		if (passwordInput.type === 'password') {
+			passwordInput.type = 'text';
+			togglePasswordBtn.textContent = '🙈';
+		} else {
+			passwordInput.type = 'password';
+			togglePasswordBtn.textContent = '👁️';
+		}
+	});
 }
