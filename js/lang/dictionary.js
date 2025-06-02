@@ -1,0 +1,42 @@
+export const dicitionary = {
+	en: {
+		title: "WIFI QR Code",
+		label_ssid: "SSID (WiFi Name):",
+		label_password: "Password:",
+		label_encryption: "Encryption:",
+		placeholder_ssid: "Enter SSID",
+		placeholder_password: "Enter Password",
+		encryption_none: "None",
+		encryption_wpa: "WPA",
+		encryption_wpa2: "WPA2",
+		encryption_wep: "WEP",
+		apply: "Apply",
+		clear: "Clear",
+		lang: "English (US)",
+		switch: "Switch Language",
+		form_description: "Fill in your Wi-Fi network details to generate a scannable QR code.",
+		password_help: "Your Wi-Fi password will be encoded in the QR code.",
+		wifi_qr_generator: "Wi-Fi QR Code Generator.",
+		all_rights_reserved: "All rights reserved for"
+	},
+	pt: {
+		title: "QR Code de WIFI",
+		label_ssid: "SSID (Nome do WIFI):",
+		label_password: "Senha:",
+		label_encryption: "Criptografia:",
+		placeholder_ssid: "Digite o SSID",
+		placeholder_password: "Digite a senha",
+		encryption_none: "Nenhuma",
+		encryption_wpa: "WPA",
+		encryption_wpa2: "WPA2",
+		encryption_wep: "WEP",
+		apply: "Aplicar",
+		clear: "Limpar",
+		lang: "Português (Brasil)",
+		switch: "Trocar Idioma",
+		form_description: "Preencha os detalhes da sua rede Wi-Fi para gerar um código QR escaneável.",
+		password_help: "Sua senha de Wi-Fi será codificada no código QR.",
+		wifi_qr_generator: "Wi-Fi Gerador de QR Code.",
+		all_rights_reserved: "Todos os direitos reservados para"
+	}
+};

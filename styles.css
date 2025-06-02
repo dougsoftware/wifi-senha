@@ -3,14 +3,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    padding: 8px;
+}
+
+main,
+header {
+    max-width: 400px;
+    width: 100%;
+}
+
+header {
+    margin-bottom: 8px;
+}
+
+header nav {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container {
-    max-width: 400px;
-    width: 100%;
     text-align: center;
     background: white;
     padding: 1.5rem;
@@ -18,9 +36,30 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#toggle-lang,
+#toggle-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 14px;
+    height: 24px;
+    border: 1px solid #222 !important;
+    padding: 2px 8px !important;
+    border-radius: 3px !important;
+}
+
 .wifi-config {
     display: flex;
     flex-direction: column;
+}
+
+.wifi-config .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.wifi-config .form-group input {
+    width: 100%;
 }
 
 .wifi-config label {
@@ -72,10 +111,12 @@ body {
     border-color: #007BFF transparent #007BFF transparent;
     animation: spinner 1.2s linear infinite;
 }
+
 @keyframes spinner {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -94,13 +135,13 @@ body.dark {
 body.dark .container {
     background: #232323;
     color: #f0f0f0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 body.light .container {
     background: white;
     color: #222;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 button#toggle-theme {
@@ -131,4 +172,23 @@ body.light button#toggle-theme {
     background-color: #28a745;
     color: white;
     font-size: 1.5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 740px) {
+    footer {
+        flex-direction: row;
+    }
 }

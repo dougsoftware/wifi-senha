@@ -2,54 +2,97 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Landing Page with QR Code</title>
-	<link rel="stylesheet" href="styles.css">
-	<script type="text/javascript" src="qrcode.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Generate a secure QR code for your Wi-Fi network. Easily share your SSID and password with friends and family.">
+  <meta name="robots" content="index, follow">
+  <title>Generate Wi-Fi QR Code | Easy Network Sharing</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="/js/libs/qrcode.js" defer></script>
+  <script type="module" src="/js/main.js" defer></script>
 </head>
 
 <body>
-	<div class="container">
-		<div class="lang-switcher">
-			<span id="current-lang"></span>
-			<button id="toggle-lang" title="Switch Language">
-				<img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png"
-					alt="Google Translate Icon"
-					style="vertical-align: middle; width: 20px; height: 20px; margin-right: 6px;">
-				Switch Language
-			</button>
-		</div>
-		<h1 id="title">WIFI QR Code</h1>
-		<div class="wifi-config">
-			<label for="ssid" id="label-ssid">SSID (Nome do WIFI):</label>
-			<input type="text" id="ssid" name="ssid" placeholder="Enter SSID">
+  <header>
+    <nav aria-label="Navigation Bar">
+      <div id="lang-container">
+        <span id="current-lang" aria-live="polite"></span>
+        <button id="toggle-lang" title="Switch Language" aria-label="Switch language">
+          <img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" alt="Google Translate Icon"
+            width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
+            <p id="toggle-lang-value"></p>
+        </button>
+      </div>
+      <div id="theme-container"></div>
+    </nav>
+  </header>
 
-			<label for="password" id="label-password">Password (Senha):</label>
-			<div style="display: flex; align-items: center;">
-				<input type="password" id="password" name="password" placeholder="Enter Password" style="flex:1;">
-				<button type="button" id="toggle-password" title="Mostrar/Esconder Senha"
-					style="margin-left:5px;">👁️</button>
-			</div>
+  <main>
+    <section class="container" aria-labelledby="main-title">
+      <h1 id="main-title">Generate Wi-Fi QR Code</h1>
 
-			<label for="encryption" id="label-encryption">Encryption (Tipo da criptografia):</label>
-			<select id="encryption" name="encryption">
-				<option value="None">None</option>
-				<option value="WPA">WPA</option>
-				<option value="WPA2">WPA2</option>
-				<option value="WEP">WEP</option>
-			</select>
+      <form class="wifi-config" aria-describedby="form-desc">
+        <p id="form-desc">Fill in your Wi-Fi network details to generate a scannable QR code.</p>
 
-			<div class="buttons-container">
-				<button id="apply">Apply</button>
-				<button id="clear">Clear</button>
-			</div>
-		</div>
-		<div id="qrcode"></div>
-		<button id="download-qrcode" style="display:none; margin-top:10px;">Download QR Code</button>
-	</div>
-	<script type="module" src="script.js"></script>
+        <div class="form-group">
+          <label id="label-ssid" for="ssid">SSID (Network Name):</label>
+          <input type="text" id="ssid" name="ssid" placeholder="Enter SSID" required aria-required="true">
+        </div>
 
+        <div class="form-group">
+          <label id="label-password" for="password">Password:</label>
+          <div style="display: flex; align-items: center;">
+            <input type="password" id="password" name="password" placeholder="Enter Password"
+              aria-describedby="password-help">
+            <button type="button" id="toggle-password" title="Show/Hide Password"
+              aria-label="Toggle password visibility" style="margin-left:5px;">👁️</button>
+          </div>
+          <small id="password-help">Your Wi-Fi password will be encoded in the QR code.</small>
+        </div>
+
+        <div class="form-group">
+          <label id="label-encryption" for="encryption">Encryption Type:</label>
+          <select id="encryption" name="encryption">
+            <option value="None" selected>None</option>
+            <option value="WPA">WPA</option>
+            <option value="WPA2">WPA2</option>
+            <option value="WEP">WEP</option>
+          </select>
+        </div>
+
+        <div class="buttons-container">
+          <button type="submit" id="apply">Apply</button>
+          <button type="reset" id="clear">Clear</button>
+        </div>
+      </form>
+
+      <section aria-label="QR Code Preview">
+        <div id="qrcode" role="img" aria-label="Generated QR Code will appear here"></div>
+        <button id="download-qrcode" style="display:none; margin-top:10px;">Download QR Code</button>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <p>&copy;&nbsp;</p>
+      <p id="copy-year"></p>
+    </div>
+    <div>
+      <p id="wifi-qr-generator">&nbsp;Wi-Fi QR Generator.</p>
+    </div>
+    <div>
+      <pn id="all-rights">&nbsp;All rights reserved for</pn>
+    </div>
+    <div>
+      <p>&nbsp;<a href="https://github.com/dougsoftware" target="_blank">Github (dougsoftware)</a></p>
+    </div>
+     <div>
+      <p>&nbsp;<a href="https://douglasmatosdev.com" target="_blank">douglasmatosdev.com</a>.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
