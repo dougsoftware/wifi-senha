@@ -9,7 +9,9 @@
   <meta name="robots" content="index, follow">
   <title>Generate Wi-Fi QR Code | Easy Network Sharing</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/footer.css">
   <script type="text/javascript" src="/js/libs/qrcode.js" defer></script>
   <script type="module" src="/js/main.js" defer></script>
 </head>
@@ -17,12 +19,18 @@
 <body>
   <header>
     <nav aria-label="Navigation Bar">
+      <div><a href="/pages/policy-privacy.html">Política de privacidade</a></div>
+      <div><a href="/pages/terms-conditions.html">Termos e condições</a></div>
+      <div> <a href="/pages/contact.html">Contact</a> </div>
+      <div><a href="https://github.com/dougsoftware/wifi-senha/blob/main/README.md">Sobre</a></div>
+    </nav>
+    <nav>
       <div id="lang-container">
         <span id="current-lang" aria-live="polite"></span>
         <button id="toggle-lang" title="Switch Language" aria-label="Switch language">
           <img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" alt="Google Translate Icon"
             width="20" height="20" style="vertical-align: middle; margin-right: 6px;">
-            <p id="toggle-lang-value"></p>
+          <p id="toggle-lang-value"></p>
         </button>
       </div>
       <div id="theme-container"></div>
@@ -76,21 +84,28 @@
   </main>
 
   <footer>
-    <div>
-      <p>&copy;&nbsp;</p>
-      <p id="copy-year"></p>
+    <div class="footer-line">
+      <div>
+        <p>&copy;&nbsp;</p>
+        <p id="copy-year"></p>
+      </div>
+      <div>
+        <p id="wifi-qr-generator">&nbsp;Wi-Fi QR Generator.</p>
+      </div>
+      <div>
+        <pn id="all-rights">&nbsp;All rights reserved for</pn>
+      </div>
+      <div>
+        <p>&nbsp;<a href="https://github.com/dougsoftware" target="_blank">Github (dougsoftware)</a></p>
+      </div>
+      <div>
+        <p>&nbsp;<a href="https://douglasmatosdev.com" target="_blank">douglasmatosdev.com</a>.</p>
+      </div>
     </div>
-    <div>
-      <p id="wifi-qr-generator">&nbsp;Wi-Fi QR Generator.</p>
-    </div>
-    <div>
-      <pn id="all-rights">&nbsp;All rights reserved for</pn>
-    </div>
-    <div>
-      <p>&nbsp;<a href="https://github.com/dougsoftware" target="_blank">Github (dougsoftware)</a></p>
-    </div>
-     <div>
-      <p>&nbsp;<a href="https://douglasmatosdev.com" target="_blank">douglasmatosdev.com</a>.</p>
+    <div class="footer-line">
+      <div><a href="/pages/policy-privacy.html">Política de privacidade</a></div>
+      <div><a href="/pages/terms-conditions.html">Termos e condições</a></div>
+      <div> <a href="/pages/contact.html">Contact</a> </div>
     </div>
   </footer>
 </body>

@@ -1,39 +1,31 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+}
+
+main {
     padding: 8px;
-}
-
-main,
-header {
-    max-width: 400px;
-    width: 100%;
-}
-
-header {
-    margin-bottom: 8px;
-}
-
-header nav {
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex: 1;
 }
 
 .container {
+    max-width: 400px;
+    width: 100%;
     text-align: center;
     background: white;
-    padding: 1.5rem;
+    padding: 0.5rem 0px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container form {
+    padding: 0.5rem;
 }
 
 #toggle-lang,
@@ -172,23 +164,4 @@ body.light button#toggle-theme {
     background-color: #28a745;
     color: white;
     font-size: 1.5rem;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-footer div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@media screen and (min-width: 740px) {
-    footer {
-        flex-direction: row;
-    }
 }

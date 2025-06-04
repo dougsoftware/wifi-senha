@@ -1,0 +1,31 @@
+header {
+	width: 100%;
+	margin-top: 16px;
+	padding: 0px 0.5rem;
+}
+
+header {
+	margin-bottom: 8px;
+}
+
+header nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.2rem;
+	font-size: 14px;
+}
+
+header  nav div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header > nav div:nth-child(1),
+header > nav div:nth-child(2),
+header > nav div:nth-child(3),
+header > nav div:nth-child(4) {
+	margin-right: 0.5rem;
+}

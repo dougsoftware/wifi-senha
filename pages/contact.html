@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Contact.">
+	<meta name="robots" content="index, follow">
+	<link rel="stylesheet" href="../styles/header.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+	<title>Contato</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 60px auto;
+			background: #ffffff;
+			padding: 30px 40px;
+			border-radius: 10px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		h1 {
+			text-align: center;
+			color: #333;
+			margin-bottom: 30px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 8px;
+			color: #555;
+			font-weight: bold;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			padding: 12px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			border-radius: 6px;
+			font-size: 16px;
+		}
+
+		input:focus,
+		textarea:focus {
+			border-color: #0077cc;
+			outline: none;
+		}
+
+		button {
+			width: 100%;
+			background-color: #0077cc;
+			color: #fff;
+			padding: 14px;
+			border: none;
+			border-radius: 6px;
+			font-size: 18px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+			background-color: #005fa3;
+		}
+
+		.footer {
+			text-align: center;
+			margin-top: 40px;
+			font-size: 14px;
+			color: #888;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav aria-label="Navigation Bar">
+			<div><a href="/index.html">Início</a></div>
+			<div><a href="/pages/policy-privacy.html">Política de privacidade</a></div>
+			<div><a href="/pages/terms-conditions.html">Termos e condições</a></div>
+			<div> <a href="/pages/contact.html">Contact</a> </div>
+		</nav>
+	</header>
+	<main>
+		<section class="container">
+			<h1>Entre em Contato</h1>
+			<form action="mailto:douglasmatos.contato@gmail.com" method="POST" enctype="text/plain">
+				<label for="nome">Nome</label>
+				<input type="text" id="nome" name="nome" required />
+
+				<label for="email">E-mail</label>
+				<input type="email" id="email" name="email" required />
+
+				<label for="mensagem">Mensagem</label>
+				<textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+				<button type="submit">Enviar</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer-line">
+			<div>
+				<p>&copy;&nbsp;</p>
+				<p id="copy-year"></p>
+			</div>
+			<div>
+				<p id="wifi-qr-generator">&nbsp;Wi-Fi QR Generator.</p>
+			</div>
+			<div>
+				<pn id="all-rights">&nbsp;All rights reserved for</pn>
+			</div>
+			<div>
+				<p>&nbsp;<a href="https://github.com/dougsoftware" target="_blank">Github (dougsoftware)</a></p>
+			</div>
+			<div>
+				<p>&nbsp;<a href="https://douglasmatosdev.com" target="_blank">douglasmatosdev.com</a>.</p>
+			</div>
+		</div>
+		<div class="footer-line">
+			<div><a href="./policy-privacy.html">Política de privacidade</a></div>
+			<div><a href="./terms-conditions.html">Termos e condições</a></div>
+			<div> <a href="./contact.html">Contact</a> </div>
+		</div>
+	</footer>
+</body>
+
+</html>

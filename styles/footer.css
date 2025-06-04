@@ -1,0 +1,23 @@
+footer .footer-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	padding-bottom: 16px;
+}
+
+footer .footer-line div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-line:nth-child(2) div:nth-child(1),
+footer .footer-line:nth-child(2) div:nth-child(2){
+    margin-right: 16px;
+}
+
+@media screen and (min-width: 740px) {
+    .footer-line {
+        flex-direction: row;
+    }
+}
